@@ -1,0 +1,103 @@
+/*
+	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+	Copyright (c) 2009 Niall Doherty
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+
+
+/* Most common stuff you'll need to change */
+
+	.coda-slider-wrapper { padding: 0px 0; margin-top:-5px; }
+	.coda-slider {}
+	
+
+        /* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 600px } 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows 
+        .coda-slider .panel { width: 610px; padding:15px 0px 30px 0px;}
+	.coda-slider-wrapper.arrows .coda-slider { margin: 0 0px }
+	
+	/* Arrow styling */
+	.coda-nav-left a { background-image: url(images/left_arrow.png);text-indent:-9999px; 
+        background-repeat:no-repeat; color: #fff; padding: 5px; width: 10px; margin-top:82px; }
+	.coda-nav-right a { background-image: url(images/right_arrow.png); text-indent:-9999px; 
+        background-repeat:no-repeat; color: #fff; padding: 5px; width: 10px; margin-top:82px; }
+	 
+        /* Tab nav */
+	.coda-nav ul li a.current { background: #ccc; }
+	
+	/* Hide Page Title */
+	#coda-slider-1 h2.title , #coda-slider-2 h2.title { display: none }
+ 
+	/* Preloader */
+	.coda-slider p.loading { padding: 20px; text-align: center }
+
+/* THUMBNAIL GALLERY */
+    /* thumbnail galery background frame ++++++++++++++++++++++++++++++++++++++++++++ */
+    .gal { background: url(images/gallery_frame.png); background-repeat: no-repeat;
+    padding: 0px 0px; width: 90px; height: 80px; float: left; margin: 0px -8px 15px 18px;}
+	.galx { background: url(images/gallery_web.png); background-repeat: no-repeat;
+     width:140px; height: 120px; float: left; margin: 0px -8px 15px 13px;}
+	 .web2_0 {width:600px; height: 120px; float: left; margin: 10px -8px 15px 5px;}
+	 .img_web2_0 {width:100px; height: 110px; float: left; margin: 5px 20px 5px 40px; background: url(images/web2_n.png);}
+	 .img_web2_0:hover {width:100px; height: 110px; float: left; margin: 5px 20px 5px 40px; background: url(images/web2.png);}
+	 
+	  .html5:hover {width:100px; height: 110px; float: left; margin: 5px 10px 5px 20px; background: url(images/html5.png);}
+	  .html5 {width:100px; height: 110px; float: left; margin: 5px 10px 5px 20px; background: url(images/html5_n.png);}
+	  
+	  .jquery:hover {width:100px; height: 110px; float: left; margin: 5px 20px 5px 20px; background: url(images/jquery.png);}
+	  .jquery {width:100px; height: 110px; float: left; margin: 5px 20px 5px 20px; background: url(images/jquery_n.png);}
+	  
+	  .flash:hover {width:100px; height: 110px; float: left; margin: 5px 10px 5px 20px; background: url(images/flash.png);}
+	  .flash {width:100px; height: 110px; float: left; margin: 5px 10px 5px 20px; background: url(images/flash_n.png);}
+
+    /* thumbnail gallery background frame - last on row ++++++++++++++++++++++++++++++++++++++++++++ */
+    .gallast { background: url(images/gallery_frame.png)  ; background-repeat: no-repeat;
+    padding:0px 0px; width: 90px; height: 80px; float: left; margin: 0px 0px 15px 18px; }
+
+    /* thumbnail gallery picture ++++++++++++++++++++++++++++++++++++++++++++ */
+    .gal2 { padding: 0px 0px; width: 60px; height: 60px; float: left; margin: 4px 0px 0px 4px; border: 1px solid #999; }
+	
+	.galn { padding: 0px 0px; width: 130px; height: 110px; float: left; margin: 4px 0px 0px 4px; border: 1px solid #999; }
+
+ .bg_animation {
+	background-image: url(images/bg_animation.png);
+	background-repeat:no-repeat;
+	float: left;
+	width: 270px;
+	height:110px;
+	margin:0;
+}
+/* LEFT & RIGHT PICTURE COLUMNS */
+    .left { background-image: url(images/gallery.png); 
+    background-repeat:no-repeat;float: left; width: 290px;height:300px; margin: -10px 0px 20px 10px; }
+    .right { background-image: url(images/gallery.png); 
+    background-repeat:no-repeat; width: 290px;height:300px;float: right;   margin: -10px 10px 20px 0px; }
+    /* larger gallery picture ++++++++++++++++++++++++++++++++++++++++++++ */    
+    .pic  { float: left; margin: 7px 0px 0px 7px; border: 1px solid #999; }
+
+/* LEFT & RIGHT TEXT COLUMNS FOR GALLERY */
+     /* left text box ++++++++++++++++++++++++++++++++++++++++++++ */
+     .left_text {  width: 280px; height:300px; float: left; margin: -10px 0px 20px 10px; }
+     /* right text box ++++++++++++++++++++++++++++++++++++++++++++ */
+     .right_text {  width: 280px; height:300px; float: right; margin: -10px 10px 20px 0px; }
+
+        
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav ul { padding: 0 0; display: block;  margin:0px auto; overflow: hidden; }
+	.coda-nav ul li {  display: inline;  }
+	.coda-nav ul li a {background: #555; color: #fff; display: block; float: left; margin-right: 2px; 
+        padding: 3px 6px 0px 6px; text-decoration: none }
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider { float: left; overflow: hidden; position: relative }
+	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel-container { position: relative }
+	.coda-nav-left, .coda-nav-right { float: left }
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none }
+	
